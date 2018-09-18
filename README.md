@@ -1,10 +1,10 @@
 # mini-blog-react-redux
 
-####This project used:
-1 React 16
-2 Redux
-3 React Router 4
-4 Webpack.
+#### This is a test project that used:
+*React 16;
+*Redux;
+*React Router 4;
+*Webpack.
 
 #### This project get 100 posts using API [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
 
@@ -32,9 +32,15 @@ In response to this request, we receive an array of the following type:
 ```
 
 We store this information using Redux.
-Цe store posts information in object entities:{} and array ids:[]. Storing information in the object entities:{} allows to quickly get the information on the key, which is a post ID:
-```
-
+We store posts information in object entities:{} and array ids:[]. Storing information in the object entities:{} allows to quickly get the information on the key, which is a post ID:
+{```
+0: {userId: 1, id: 1, title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit", body: "quia et suscipitsuscipit recusandae consequuntur …strum rerum est autem sunt rem eveniet architecto"}
+1: {userId: 1, id: 2, title: "qui est esse", body: "est rerum tempore vitae↵sequi sint nihil reprehend…aperiam non debitis possimus qui neque nisi nulla"}
+2: {userId: 1, id: 3, title: "ea molestias quasi exercitationem repellat qui ipsa sit aut", body: "et iusto sed quo iure↵voluptatem occaecati omnis emolestiae porro eius odio et labore et velit aut"}
+3: {userId: 1, id: 4, title: "eum et est occaecati", body: "ullam et saepe reiciendis voluptatem adipisci↵sit … ipsam iure↵quis sunt voluptatem rerum illo velit"}
+4: {userId: 1, id: 5, title: "nesciunt quas odio", body: "repudiandae veniam quaerat sunt sed↵alias aut fugi…sse voluptatibus quis↵est aut tenetur dolor neque"}
+...
+}
 ```
 
 
