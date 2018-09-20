@@ -7,7 +7,7 @@
 * Webpack.
 
 #### This project get 100 posts using API [JSONPlaceholder](https://jsonplaceholder.typicode.com/).
-When page is loaded you can see posts name and posts body. When you clicked on the post you can see detailed information - comments and user information.
+When page is loaded you can see posts name and posts body. When you clicked on the button 'Learn more' you can see detailed information - comments and user information.
 
 In postsAPI.js we fetch this posts information by using fetch Api - method fetch() to the URL:
 ```
@@ -31,11 +31,11 @@ In response to this request, we receive an array of the following type:
   ...
   ]
 ```
-When we need to get comments information we fetch informqtion from the URL (id-post id):
+When we need to get comments information we fetch information from the URL (id-post id):
 ```
 https://jsonplaceholder.typicode.com/posts/${id}/comments
 ```
-When we need to get user information we fetch informqtion from the URL (id- user id):
+When we need to get user information we fetch information from the URL (id- user id):
 ```
 https://jsonplaceholder.typicode.com//users/${id}
 ```
@@ -57,8 +57,7 @@ entities:{
  Actions are the source of information for the store. We have two types for actions: 'GET' and'GET_SUCCESS'.
  We have actions for getting posts, comments and user information. For example:
  ```
-/redux/effects/commentsActions.js
- 
+/redux/effects/commentsActions.js 
  
  
 export const GET_COMMENTS='GET_COMMENTS';
@@ -81,7 +80,6 @@ export function getCommentsSuccessAction(payload){
 ```
 /redux/effects/commentsEffects.js
  
- 
 
 import POSTS_API from './../../postsAPI.js'
 import * as Actions from './../actions/commentsActions.js'
@@ -101,6 +99,7 @@ export function getCommentsEffect(id){
 Reducers specify how the application's state changes in response to actions sent to the store. So we have reducers for posts, comments, users. For example:
 ```
 /redux/reducers/commentsReducer.js
+
 
 export default commentsReducer
 import {GET_COMMENTS, GET_COMMENTS_SUCCESS} from './../actions/commentsActions.js'
@@ -139,8 +138,6 @@ In Redux:
 ```
 /redux/selectors/postSelectors.js
 
-
-
 import {createSelector} from 'reselect'
 
 const PostsDataSelector=(state)=> {
@@ -173,7 +170,7 @@ import {PostsSelector, LoadingSelector} from './../redux/selectors/postSelectors
 ```
 #### In React we have components - AppBar, LoadingItem, PostInfoPage, PostItem, PostsListPage.
 PostsListPage - is a smart component to getting videos data;
-PostItem - to show posts data in UI. When we click on the block with a description of the post - we go to the viewing of this post detailed information (component PostInfoPage). T
+PostItem - to show posts data in UI. When we click on the button 'Learn more' with a description of the post - we go to the viewing of this post detailed information (component PostInfoPage).
 
 #### We use [Material-UI](https://material-ui.com/) to implement some Google's Material Design to this project.
 #### Webpack is used as a bundler system. 
