@@ -1,6 +1,6 @@
 # mini-blog-react-redux
 
-#### This is a test project that used:
+#### This is a test project that uses:
 * React 16;
 * Redux;
 * React Router 4;
